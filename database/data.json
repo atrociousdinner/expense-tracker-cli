@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "date": "2025-11-02",
+    "description": "Honey",
+    "amount": 50
+  },
+  {
+    "id": 2,
+    "date": "2025-11-02",
+    "description": "Honey",
+    "amount": 50
+  },
+  {
+    "id": 3,
+    "date": "2025-11-02",
+    "description": "Tissue",
+    "amount": 5
+  },
+  {
+    "id": 4,
+    "date": "2025-11-02",
+    "description": "Tissue",
+    "amount": 5
+  }
+]

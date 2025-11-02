@@ -1,37 +1,11 @@
 const { program } = require("commander");
-const fs = require("fs").promises;
-const path = require("path");
-const filePath = path.join(__dirname, "../database/data.json");
+const {write_data} = require('./file_operations/write_data.js')
+const {getExpense} = require('./file_operations/get_expense.js')
 
-getExpense = async () => {
-  try {
-    await fs.access(filePath);
-    return await read_data();
-  } catch {
-    return [];
-  }
-};
 
-read_data = async () => {
-  try {
-    const data = await fs.readFile(filePath, "utf8");
-    return data;
-  } catch (err) {
-    console.error(`Cannot read file: `, err);
-  }
-};
-
-write_data = async (data) => {
-  try {
-    await fs.writeFile(filePath, data, "utf8");
-    const parsed = (JSON.parse(data))
-    const lastExpense = parsed[parsed.length - 1];
-
-    console.log(`Expense added successfully (ID: ${lastExpense.id})`);
-  } catch (err) {
-    console.error(`Cannot write file: `, err);
-  }
-};
+list_data = (expenses) => {
+  console.table(expenses)
+}
 
 program
   .command("add")
@@ -56,6 +30,7 @@ program
 
     expenses.push(data_to_send)
     write_data(JSON.stringify(expenses, null, 2))
+    list_data(expenses)
   });
 
 program.parse();
