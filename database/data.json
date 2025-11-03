@@ -1,20 +1,26 @@
 [
   {
-    "id": 2,
-    "date": "2025-11-02",
-    "description": "Honey",
-    "amount": 50
+    "id": 5,
+    "date": "2025-11-03",
+    "description": "Chicken_Fried_Rice",
+    "amount": 70
   },
   {
-    "id": 3,
-    "date": "2025-11-02",
-    "description": "Tissue",
-    "amount": 5
+    "id": 6,
+    "date": "2025-11-03",
+    "description": "Lunch",
+    "amount": 45
   },
   {
-    "id": 4,
-    "date": "2025-11-02",
-    "description": "Tissue",
-    "amount": 5
+    "id": 7,
+    "date": "2025-11-03",
+    "description": "Khana1",
+    "amount": 60
+  },
+  {
+    "id": 8,
+    "date": "2025-12-03",
+    "description": "Khana1",
+    "amount": 60
   }
 ]
