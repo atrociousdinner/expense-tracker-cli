@@ -2,7 +2,9 @@ const { program } = require("commander");
 const { write_data } = require("./file_operations/write_data.js");
 const { getExpense } = require("./file_operations/get_expense.js");
 
-program
+
+function delete_command(program) {
+  program
   .command("delete")
   .option("--id <number>", "delete the specified id")
   .action(async (options) => {
@@ -22,5 +24,6 @@ program
           console.log('The specified id does not exist.')
       }
   });
+}
 
-program.parse();
+module.exports = {delete_command}

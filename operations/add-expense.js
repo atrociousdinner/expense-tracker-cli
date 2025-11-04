@@ -2,7 +2,9 @@ const { program } = require("commander");
 const { write_data } = require("./file_operations/write_data.js");
 const { getExpense } = require("./file_operations/get_expense.js");
 
-program
+
+function add_command(program) {
+  program
   .command("add")
   .option("-d, --description <desc>", "add a description of the expense")
   .option("-a, --amount <number>", "add expense value")
@@ -25,5 +27,6 @@ program
     await write_data(JSON.stringify(expenses, null, 2))
     console.log(`Expense added successfully (ID: ${data_to_send.id})`);
   });
+}
 
-program.parse();
+module.exports = {add_command}

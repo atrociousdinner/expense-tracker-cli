@@ -12,9 +12,12 @@ const listexpense = async () => {
     }
 }
 
-program
+function list_command(program) {
+    program
     .command('list')
     .description('list all expenses')
-    .action(listexpense())
+    .action(listexpense)
+}
 
-module.exports = {listexpense}
+
+module.exports = {list_command}

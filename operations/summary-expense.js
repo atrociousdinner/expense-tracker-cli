@@ -28,13 +28,14 @@ const summaryexpense = async (month) => {
   }
 };
 
-program
+function summary_command(program) {
+  program
   .command("summary")
   .description("sum all the expenses")
   .option("-m, --month <month>", "the total expense for the month specified")
   .action((options) => {
     summaryexpense(options.month);
   });
+}
 
-program.parse();
-module.exports = { summaryexpense };
+module.exports = { summary_command };
