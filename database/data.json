@@ -1,58 +1,16 @@
 [
   {
-    "id": 5,
-    "date": "2025-11-03",
-    "description": "Chicken_Fried_Rice",
-    "amount": 70,
-    "category": "food"
-  },
-  {
-    "id": 6,
-    "date": "2025-11-03",
-    "description": "Lunch",
-    "amount": 45,
-    "category": "food"
-  },
-  {
-    "id": 7,
-    "date": "2025-11-03",
-    "description": "Khana1",
-    "amount": 60,
-    "category": "food"
-  },
-  {
-    "id": 8,
-    "date": "2025-11-03",
-    "description": "Khana2",
-    "amount": 135,
-    "category": "food"
-  },
-  {
-    "id": 9,
-    "date": "2025-11-04",
-    "description": "Khana1",
-    "amount": 70,
-    "category": "food"
-  },
-  {
-    "id": 10,
-    "date": "2025-11-04",
-    "description": "Heavy_Lunch",
-    "amount": 200,
-    "category": "food"
-  },
-  {
-    "id": 11,
-    "date": "2025-11-04",
-    "description": "Tea",
-    "amount": 20,
+    "id": 1,
+    "date": "2025-11-05",
+    "description": "ChickenRoll",
+    "amount": 140,
     "category": "misc"
   },
   {
-    "id": 12,
-    "date": "2025-11-04",
-    "description": "Tea",
-    "amount": 20,
-    "category": "food"
+    "id": 2,
+    "date": "2025-11-05",
+    "description": "ChickenFriedRice",
+    "amount": 110,
+    "category": "misc"
   }
 ]

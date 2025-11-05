@@ -1,7 +1,7 @@
 const { program } = require("commander");
 const { getExpense } = require("./file_operations/get_expense");
 
-const summaryexpense = async (month) => {
+const summaryexpense = async (month, silent = false) => {
     try {
     const monthNum = parseInt(month)
     const data = await getExpense();
@@ -22,7 +22,8 @@ const summaryexpense = async (month) => {
     expenses.forEach((expense) => {
       summary += expense.amount;
     });
-    console.log(`$${summary}`);
+     if(!silent) console.log(`$${summary}`);
+      return summary
   } catch (err) {
     console.error("Error summing expenses: ", err);
   }
@@ -38,4 +39,4 @@ function summary_command(program) {
   });
 }
 
-module.exports = { summary_command };
+module.exports = { summary_command, summaryexpense };
