@@ -5,6 +5,7 @@ const { getExpense } = require("./file_operations/get_expense.js");
 function add_command(program) {
   program
     .command("add")
+    .description('add an expense record')
     .option("-d, --description <desc>", "add a description of the expense")
     .option("-a, --amount <number>", "add expense value")
     .option(

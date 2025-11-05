@@ -5,7 +5,8 @@ const { getExpense } = require("./file_operations/get_expense.js");
 
 function delete_command(program) {
   program
-  .command("delete")
+    .command("delete")
+    .description('delete an expense record')
   .option("--id <number>", "delete the specified id")
   .action(async (options) => {
     const data = await getExpense();
