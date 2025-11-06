@@ -1,20 +1,23 @@
 const { write_budget } = require("./file_operations/write_budget.js");
-const {summaryexpense} = require("./summary-expense.js")
+const { summaryexpense } = require("./summary-expense.js")
+const {get_budget} = require("./file_operations/get_budget.js")
 
 
 async function set_budget(options) {
     try {
-        budget = []
+        const budget = await get_budget()
+        const budget_parsed = JSON.parse(budget)
         monthNum = parseInt(options.month)
         amountNum = parseInt(options.amount)
-        spentNum = await summaryexpense(monthNum, silent = true) // Temporary. We shall invoke a function that calculates the total sum
+        spentNum = await summaryexpense(monthNum, silent = true)    
         budget_to_send = {
             "month" : `${monthNum}`,
             "budget" : `${amountNum}`,
             "spent" : `${spentNum}`
         }
-        budget.push(budget_to_send)
-        await write_budget(JSON.stringify(budget, null, 2))
+        updated_budget = budget_parsed.filter(record => parseInt(record.month) !== monthNum)
+        updated_budget.push(budget_to_send)
+        await write_budget(JSON.stringify(updated_budget, null, 2))
 
     }
     catch (err) {
@@ -27,7 +30,7 @@ async function set_budget(options) {
 function set_command(program) {
   program
     .command("set")
-    .description('set a budget for a given month')
+    .description('set a budget for a given month; previously set budgets will be overwritten when the command is executed again')
     .option("-a, --amount <number>", "add budget amount")
     .option("-m, --month <month>", "specify the month, default month is the current month.")
 
