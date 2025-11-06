@@ -1,5 +1,5 @@
 const { write_budget } = require("./file_operations/write_budget.js");
-const { summaryexpense } = require("./summary-expense.js")
+const { summaryexpense } = require("./summary_expense.js")
 const {get_budget} = require("./file_operations/get_budget.js")
 
 

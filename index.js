@@ -3,11 +3,11 @@
 const { program } = require('commander')
 
 
-const { add_command } = require('./operations/add-expense')
-const {delete_command} = require('./operations/delete-expense')
-const {list_command} = require('./operations/list-expense')
-const { summary_command } = require('./operations/summary-expense')
-const { set_command } = require('./operations/set-budget')
+const { add_command } = require('./operations/add_expense')
+const {delete_command} = require('./operations/delete_expense')
+const {list_command} = require('./operations/list_expense')
+const { summary_command } = require('./operations/summary_expense')
+const { set_command } = require('./operations/set_budget')
 
 
 add_command(program)
