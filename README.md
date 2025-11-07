@@ -8,7 +8,7 @@
 
 A simple, command-line based **Expense Tracker** built with **Node.js**.  
 Track your spending, manage budgets, and view monthly summaries, all from your terminal.
-
+Inspired from: https://roadmap.sh/projects/expense-tracker
 ---
 
 ##  Features
