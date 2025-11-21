@@ -43,7 +43,7 @@ Inspired from: https://roadmap.sh/projects/expense-tracker
 4. **Make the CLI executable**
    ```bash
    chmod +x index.js
-5. **(Optional) Link it globally to use as a system command:**
+5. **Link it globally to use as a system command:**
    ```bash
    npm link
 
